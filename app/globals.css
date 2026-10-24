@@ -1,0 +1,73 @@
+export type OverviewItem = {
+  label: string;
+  value: string;
+  change: string;
+  caption: string;
+};
+
+export type Member = {
+  id: number;
+  name: string;
+  plan: string;
+  status: 'Active' | 'Paused' | 'Expired';
+  joined: string;
+  attendance: number;
+  trainer: string;
+};
+
+export type Plan = {
+  name: string;
+  price: string;
+  members: number;
+};
+
+export type ClassItem = {
+  name: string;
+  time: string;
+  trainer: string;
+  capacity: string;
+};
+
+export type Activity = {
+  id: number;
+  title: string;
+  time: string;
+};
+
+export const dashboardData = {
+  overview: [
+    { label: 'Active members', value: '2,480', change: '+12.4%', caption: 'vs last month' },
+    { label: 'Monthly revenue', value: '$43.2K', change: '+8.1%', caption: 'subscription income' },
+    { label: 'Class attendance', value: '84%', change: '+5.3%', caption: 'this week' },
+    { label: 'New signups', value: '92', change: '+18.7%', caption: 'last 7 days' },
+  ] as OverviewItem[],
+  members: [
+    { id: 1, name: 'Sophia Martin', plan: 'Premium', status: 'Active', joined: 'Joined 2 months ago', attendance: 96, trainer: 'Lena' },
+    { id: 2, name: 'Daniel Lee', plan: 'Strength', status: 'Active', joined: 'Joined 4 months ago', attendance: 89, trainer: 'Marco' },
+    { id: 3, name: 'Ava Thompson', plan: 'Group', status: 'Paused', joined: 'Joined 1 month ago', attendance: 64, trainer: 'Nina' },
+    { id: 4, name: 'Isaac Ross', plan: 'Premium', status: 'Active', joined: 'Joined 6 months ago', attendance: 91, trainer: 'Lena' },
+    { id: 5, name: 'Mia Lewis', plan: 'Flex', status: 'Expired', joined: 'Joined 2 weeks ago', attendance: 42, trainer: 'Noah' },
+  ] as Member[],
+  plans: [
+    { name: 'Premium', price: '$79/mo', members: 834 },
+    { name: 'Strength', price: '$99/mo', members: 621 },
+    { name: 'Group', price: '$59/mo', members: 713 },
+    { name: 'Flex', price: '$39/mo', members: 312 },
+  ] as Plan[],
+  classes: [
+    { name: 'HIIT Blast', time: '07:00 AM', trainer: 'Chris', capacity: '18/24 seats' },
+    { name: 'Power Yoga', time: '09:30 AM', trainer: 'Nina', capacity: '12/15 seats' },
+    { name: 'Strength Lab', time: '12:00 PM', trainer: 'Marco', capacity: '10/12 seats' },
+    { name: 'Spin Rush', time: '06:15 PM', trainer: 'Lena', capacity: '22/25 seats' },
+  ] as ClassItem[],
+  activities: [
+    { id: 1, title: 'New member registration approved', time: '12 mins ago' },
+    { id: 2, title: 'Payment reminder sent to 8 members', time: '1 hour ago' },
+    { id: 3, title: 'Strength Lab class reached 90% occupancy', time: '2 hours ago' },
+    { id: 4, title: 'Trainer schedule updated for next week', time: 'Today' },
+  ] as Activity[],
+};
+
+export async function getDashboardData() {
+  return dashboardData;
+}

@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { getDashboardData } from '@/lib/data';
 
 export default async function HomePage() {
@@ -15,12 +16,12 @@ export default async function HomePage() {
         </div>
 
         <nav className="nav">
-          <a className="nav-item active" href="#">Dashboard</a>
-          <a className="nav-item" href="#">Members</a>
-          <a className="nav-item" href="#">Classes</a>
-          <a className="nav-item" href="#">Trainers</a>
-          <a className="nav-item" href="#">Reports</a>
-          <a className="nav-item" href="#">Settings</a>
+          <Link className="nav-item active" href="/">Dashboard</Link>
+          <Link className="nav-item" href="/members">Members</Link>
+          <Link className="nav-item" href="/classes">Classes</Link>
+          <Link className="nav-item" href="/trainers">Trainers</Link>
+          <Link className="nav-item" href="/attendance">Attendance</Link>
+          <Link className="nav-item" href="/billing">Billing</Link>
         </nav>
 
         <div className="profile-card">
@@ -56,7 +57,7 @@ export default async function HomePage() {
           <div className="panel wide-panel">
             <div className="panel-header">
               <h3>Members</h3>
-              <button className="ghost-btn">View all</button>
+              <Link href="/members" className="ghost-btn">View all</Link>
             </div>
 
             <div className="table-wrap">

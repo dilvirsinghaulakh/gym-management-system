@@ -1,13 +1,14 @@
 # Gym Management System
 
-A simple full-stack gym management dashboard starter built with Next.js.
+A full-stack gym management dashboard starter built with Next.js for members, classes, trainers, attendance, and billing.
 
 ## Features
 
-- Member overview and status tracking
-- Revenue and attendance summary cards
-- Membership plan list
-- Class schedule and recent activity
+- Dashboard overview with KPI cards
+- Member management directory
+- Class calendar and trainer information
+- Attendance tracking dashboard
+- Billing and payment overview
 - API routes for dashboard and member data
 
 ## Getting started
@@ -20,16 +21,10 @@ A simple full-stack gym management dashboard starter built with Next.js.
 
 ## Scripts
 
-- `npm run dev` — start the local development server
-- `npm run build` — build the production app
-- `npm run start` — run the production server
-
-## Project structure
-
-- `app/` — app pages and API routes
-- `lib/` — shared data and utilities
-- `public/` — static assets if needed
+- `npm run dev` — starts the app locally
+- `npm run build` — creates a production build
+- `npm run start` — runs the production build
 
 ## Notes
 
-This starter is intentionally lightweight and designed as a base for a full gym management platform with additional booking, billing, trainer, and admin features.
+This starter is designed as a strong base for a full gym operations platform, with room to expand into reservations, payments, equipment management, and staff administration.
